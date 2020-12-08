@@ -44,6 +44,9 @@
                     <h6 class="collapse-header">Custom Components:</h6>
                     {{--                    <a class="collapse-item" href="buttons.html">Buttons</a>--}}
                     <a class="collapse-item" href="/admin">All Admin</a>
+                    <a class="collapse-item" href="{{ route('author.index') }}"> Authors </a>
+                    <a class="collapse-item" href="/category">All Category </a>
+                    <a class="collapse-item" href="/post">All Post </a>
                 </div>
             </div>
         </li>
@@ -121,7 +124,7 @@
         <!-- Sidebar Message -->
         <div class="sidebar-card">
             <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
-            <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+            <p class="text-center mb-2"><strong> SNK Blog Admin </strong> is packed with premium features, components, and more!</p>
             <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
         </div>
 

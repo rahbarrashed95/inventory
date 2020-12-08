@@ -19,4 +19,5 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('Admin_Panel/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link href="{{asset('Admin_Panel/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('Admin_Panel/css/toastr.css') }}" rel="stylesheet">
 </head>

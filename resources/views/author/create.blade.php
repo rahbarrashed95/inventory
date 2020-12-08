@@ -5,11 +5,11 @@
         <div class="col-md-8">
 
             <div class="card card-info">
-                <div class="card-header bg-primary text-white">Add New Admin</div>
+                <div class="card-header bg-primary text-white">Add New Author</div>
 
 
                   <div class="card-body">
-                    {!! Form::open(['url' => '/admin','method' => 'post','files' => true]) !!}
+                    {!! Form::open(['url' => '/author','method' => 'post','files' => true]) !!}
                         <div class="form-group">
                             {!! Form::label('', 'Name :') !!}
                             {!! Form::text('name', '',$attributes=['class'=>'form-control']) !!}

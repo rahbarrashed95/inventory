@@ -38,6 +38,27 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type','info') }}"
+    switch(type)
+    {
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+    @endif
+</script>
+
 <!-- Bootstrap core JavaScript-->
 <script src="{{asset('Admin_Panel/vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{ asset('Admin_Panel/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -58,7 +79,8 @@
 <script src="{{ asset('Admin_Panel/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
 <!-- Page level custom scripts -->
-<script src="{{ asset('Admin_Panel/js/demo/datatables-demo.js') }}"></script>
+<script src="{{ asset('Admin_Panel/js/toastr.js') }}"></script>
+<script src="{{asset('Admin_Panel/vendor/jquery/jquery.min.js')}}"></script>
 
 </body>
 

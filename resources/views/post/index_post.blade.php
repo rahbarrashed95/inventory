@@ -16,11 +16,10 @@
                     <thead>
                     <tr>
                         <th>SL</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>Address</th>
-                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Content</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -29,11 +28,10 @@
                     @foreach($data as $key => $value)
                     <tr>
                         <td>{{ $key+1 }}</td>
-                        <td>{{ $value->name }}</td>
-                        <td>{{ $value->email }}</td>
-                        <td>{{ $value->password }}</td>
-                        <td>{{ $value->address }}</td>
-                        <td><img src="{{  ($value->photo == null) ? asset('Admin_Panel/admin/default.jpg') : URL::to($value->photo) }}" style="height: 50px;width: 50px;"/></td>
+                        <td>{{ $value->title }}</td>
+                        <td>{{ $value->user->name }}</td>
+                        <td>{{ $value->category->name }}</td>
+                        <td>{{ $value->content }}</td>
                         <td class="action_btn">
                             {{ Form::open(['url' => "/admin/$value->id", 'method'=>'DELETE'])  }}
                             <button class="btn btn-danger btn-circle btn-sm">
