@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::all();
+        $data = Category::with('posts')->get();
         return view('category.index_category',compact('data'));
     }
 
@@ -45,9 +45,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        $category = Category::with('posts')->find($id);
+        return view('category.showpost',compact('category'));
     }
 
     /**

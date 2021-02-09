@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('admin.dashboard');
+    return redirect()->route('login');
 });
 
 // Admin
@@ -16,3 +16,8 @@ Route::resource('/category','CategoryController');
 
 // Post
 Route::resource('/post','PostController');
+Route::get('/post/test','PostController@test');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

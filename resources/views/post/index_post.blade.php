@@ -1,8 +1,8 @@
 @extends('main')
 @section('content')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Welcome to admin list page...!!!</h1>
-        <a href="{{ route('admin.create') }}" class="d-none d-sm-inline-block btn btn-primary shadow-sm">Add Admin</a>
+        <h1 class="h3 mb-0 text-gray-800"></h1>
+        <a href="{{ route('post.create') }}" class="d-none d-sm-inline-block btn btn-primary shadow-sm">Add Post</a>
     </div>
 
     <!-- DataTales Example -->
@@ -52,11 +52,10 @@
                     <thead>
                     <tr>
                         <th>SL</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>Address</th>
-                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Content</th>
                         <th>Action</th>
                     </tr>
                     </thead>

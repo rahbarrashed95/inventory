@@ -16,19 +16,23 @@
                     <thead>
                     <tr>
                         <th>SL</th>
-                        <th>Name</th>
-                        <th>Descriptions</th>
+                        <th>Title</th>
+                        <th>Post Category</th>
+                        <th>Author</th>
+                        <th>Content</th>
                         <th>Action</th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    @foreach($data as $key => $value)
-                    <tr>
-                        <td>{{ $key+1 }}</td>
-                        <td>{{ $value->name }}</td>
-                        <td>{{ $value->dsc }}</td>
-                         <td class="action_btn">
+                    @foreach($category->posts as $key => $value)
+                        <tr>
+                            <td>{{ $key+1 }}</td>
+                            <td>{{ $value->title }}</td>
+                            <td>{{ $category->name }}</td>
+                            <td>{{ $value->user->name }}</td>
+                            <td>{{ $value->content }}</td>
+                            <td class="action_btn">
                                 {{ Form::open(['url' => "/admin/$value->id", 'method'=>'DELETE'])  }}
                             <button class="btn btn-danger btn-circle btn-sm">
                                 <i class="fas fa-trash"></i>
@@ -44,7 +48,7 @@
                     <i class="fas fa-check"></i>
                   </a>
                             </td>
-                    </tr>
+                        </tr>
                     @endforeach
 
 
@@ -52,8 +56,10 @@
                     <thead>
                     <tr>
                         <th>SL</th>
-                        <th>Name</th>
-                        <th>Descriptions</th>
+                        <th>Title</th>
+                        <th>Post Category</th>
+                        <th>Author</th>
+                        <th>Content</th>
                         <th>Action</th>
                     </tr>
                     </thead>

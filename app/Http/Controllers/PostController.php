@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $data = Post::all();
+        $data = Post::with('category','user')->get();
         return view('post.index_post',compact('data'));
     }
 
@@ -25,7 +25,11 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.test');
+    }
+
+    public function test(){
+        echo 'hi';
     }
 
     /**
